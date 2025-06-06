@@ -18,17 +18,23 @@
 <body>
 
     <header class="header">
-        <nav class="navbar header-nav header-white navbar-expand-lg">
-            <div class="container gap-5">
-                <a class="navbar-brand " href="#">
-                    <img src="./assets/images/logo-light.png" alt="">
+        <nav class="navbar header-nav header-white navbar-expand-xl">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo-light.png" alt="Logo">
                 </a>
-                <button class="btn  d-lg-none d-block" type="button" data-bs-toggle="offcanvas"
+
+                <!-- Toggle Button (Mobile Only) -->
+                <button class="btn d-xl-none d-block" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- Collapsible Navbar -->
+                <div class="collapse navbar-collapse justify-content-center" id="navContent">
+                    <ul class="navbar-nav mx-auto gap-xl-4 gap-2">
                         <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Insights</a></li>
@@ -43,25 +49,28 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-flex align-items-center">
-                        <a class="me-3 text-decoration-none text-dark" href="#">Request a demo</a>
-                        <a class="me-3 text-decoration-none text-dark" href="#">Log in</a>
-                        <button class="btn btn-success me-3">Start free trial</button>
+                </div>
 
-                        <!-- Language Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">En</button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">English</a></li>
-                                <li><a class="dropdown-item" href="#">العربية</a></li>
-                                <li><a class="dropdown-item" href="#">中文</a></li>
-                            </ul>
-                        </div>
+                <!-- Right Side Actions -->
+                <div class="d-none d-xl-flex align-items-center gap-3">
+                    <a class="text-decoration-none text-dark" href="#">Request a demo</a>
+                    <a class="text-decoration-none text-dark" href="#">Log in</a>
+                    <button class="btn btn-success">Start free trial</button>
+
+                    <!-- Language Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">En</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">العربية</a></li>
+                            <li><a class="dropdown-item" href="#">中文</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
+        <!-- Mobile Offcanvas -->
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
             id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header">
@@ -90,6 +99,7 @@
             </div>
         </div>
     </header>
+
 
     <main>
         <section class="hero-section">
@@ -508,7 +518,7 @@
 
                 <div class="row g-4">
                     <!-- Card 1 -->
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4 col-la-12">
                         <div class="card position-relative overflow-hidden">
                             <div class="card-category">Strategy</div>
                             <img src="./assets/images/img-11.jpg" class="card-img-top" alt="Strategy">
@@ -520,7 +530,7 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4 col-la-12">
                         <div class="card position-relative overflow-hidden">
                             <div class="card-category" style="background-color: #009688;">Marketing</div>
                             <img src="./assets/images/img-12.jpg" class="card-img-top" alt="Marketing">
@@ -532,7 +542,7 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4 col-la-12">
                         <div class="card position-relative overflow-hidden">
                             <div class="card-category" style="background-color: #4CAF50;">Business</div>
                             <img src="./assets/images/img-13.jpg" class="card-img-top" alt="Business">
@@ -563,9 +573,9 @@
         <!-- FOOTER SECTION -->
         <footer class="footer bg-sec">
             <div class="container">
-                <div class="row text-start">
+                <div class="row text-start gx-4 gy-3">
                     <!-- Column 1: Description -->
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-4 mb-4 col-12">
                         <p>This powerful tool eliminates the need to leave Salesforce to get things done as I can create
                             a custom proposal with dynamic pricing tables.</p>
                         <div class="app-buttons mt-3">
@@ -577,46 +587,51 @@
                     </div>
 
                     <!-- Column 2: Links -->
-                    <div class="col-md-2 mb-4">
-                        <h6>About</h6>
-                        <a href="#">Pricing</a><br>
-                        <a href="#">Features</a><br>
-                        <a href="#">Integrations</a><br>
-                        <a href="#">Career</a><br>
-                        <a href="#">Contact</a><br>
-                        <a href="#">Contact v2</a>
+                    <div class="d-flex flex-wrap gap-4 justify-content-between flex-sm-nowrap col-12 col-md-4">
+                        <div class="flex-fill">
+                            <h6>About</h6>
+                            <a href="#">Pricing</a><br>
+                            <a href="#">Features</a><br>
+                            <a href="#">Integrations</a><br>
+                            <a href="#">Career</a><br>
+                            <a href="#">Contact</a><br>
+                            <a href="#">Contact v2</a>
+                        </div>
+
+                        <div class="flex-fill">
+                            <h6>Shop</h6>
+                            <a href="#">With sidebar</a><br>
+                            <a href="#">Product detail</a><br>
+                            <a href="#">Product detail v2</a><br>
+                            <a href="#">Cart</a><br>
+                            <a href="#">Checkout</a><br>
+                            <a href="#">Order confirmation</a>
+                        </div>
                     </div>
 
-                    <div class="col-md-2 mb-4">
-                        <h6>Shop</h6>
-                        <a href="#">With sidebar</a><br>
-                        <a href="#">Product detail</a><br>
-                        <a href="#">Product detail v2</a><br>
-                        <a href="#">Cart</a><br>
-                        <a href="#">Checkout</a><br>
-                        <a href="#">Order confirmation</a>
+                    <div class="d-flex flex-wrap gap-4 justify-content-between flex-sm-nowrap col-12 col-md-4">
+                        <div class="flex-fill">
+                            <h6>Request</h6>
+                            <a href="#">Request a demo</a><br>
+                            <a href="#">Sign in</a><br>
+                            <a href="#">Sign in v2</a><br>
+                            <a href="#">Sign up</a><br>
+                            <a href="#">Sign up v2</a><br>
+                            <a href="#">Reset password</a><br>
+                            <a href="#">Reset password v2</a>
+                        </div>
+
+                        <div class="flex-fill">
+                            <h6>Blog</h6>
+                            <a href="#">Blog detail</a><br>
+                            <a href="#">FAQ</a><br>
+                            <a href="#">404</a><br>
+                            <a href="#">Coming Soon</a><br>
+                            <a href="#">Terms of service</a><br>
+                            <a href="#">Privacy policy</a>
+                        </div>
                     </div>
 
-                    <div class="col-md-2 mb-4">
-                        <h6>Request</h6>
-                        <a href="#">Request a demo</a><br>
-                        <a href="#">Sign in</a><br>
-                        <a href="#">Sign in v2</a><br>
-                        <a href="#">Sign up</a><br>
-                        <a href="#">Sign up v2</a><br>
-                        <a href="#">Reset password</a><br>
-                        <a href="#">Reset password v2</a>
-                    </div>
-
-                    <div class="col-md-2 mb-4">
-                        <h6>Blog</h6>
-                        <a href="#">Blog detail</a><br>
-                        <a href="#">FAQ</a><br>
-                        <a href="#">404</a><br>
-                        <a href="#">Coming Soon</a><br>
-                        <a href="#">Terms of service</a><br>
-                        <a href="#">Privacy policy</a>
-                    </div>
                 </div>
 
                 <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
